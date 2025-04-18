@@ -1,0 +1,10 @@
+C:\Users\ASUS\source\repos\Grilla_S4\Grilla_S4\bin\Debug\Grilla_S4.exe.config
+C:\Users\ASUS\source\repos\Grilla_S4\Grilla_S4\bin\Debug\Grilla_S4.exe
+C:\Users\ASUS\source\repos\Grilla_S4\Grilla_S4\bin\Debug\Grilla_S4.pdb
+C:\Users\ASUS\source\repos\Grilla_S4\Grilla_S4\obj\Debug\Grilla_S4.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\Grilla_S4\Grilla_S4\obj\Debug\Grilla_S4.frmPrincipal.resources
+C:\Users\ASUS\source\repos\Grilla_S4\Grilla_S4\obj\Debug\Grilla_S4.Properties.Resources.resources
+C:\Users\ASUS\source\repos\Grilla_S4\Grilla_S4\obj\Debug\Grilla_S4.csproj.GenerateResource.cache
+C:\Users\ASUS\source\repos\Grilla_S4\Grilla_S4\obj\Debug\Grilla_S4.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\Grilla_S4\Grilla_S4\obj\Debug\Grilla_S4.exe
+C:\Users\ASUS\source\repos\Grilla_S4\Grilla_S4\obj\Debug\Grilla_S4.pdb
