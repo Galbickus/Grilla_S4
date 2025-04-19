@@ -12,6 +12,7 @@ namespace Grilla_S4
 {
     public partial class frmPrincipal : Form
     {
+        int nro;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -40,7 +41,7 @@ namespace Grilla_S4
 
         private void dtgvDatos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int nro = e.RowIndex; // muestra la posición de la fila  seleccionada
+            nro = e.RowIndex; // muestra la posición de la fila  seleccionada
 
             if (nro != -1)
             {
@@ -50,6 +51,11 @@ namespace Grilla_S4
             {
                 MessageBox.Show("selección inválida");
             }
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            dtgvDatos.Rows.RemoveAt(nro);
         }
     }
 }
