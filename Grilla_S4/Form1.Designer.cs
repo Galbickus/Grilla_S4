@@ -37,11 +37,13 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnCargar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvDatos = new System.Windows.Forms.DataGridView();
+            this.pnlGrilla = new System.Windows.Forms.Panel();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDatos)).BeginInit();
+            this.pnlGrilla.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -82,7 +84,7 @@
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(296, 78);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(337, 32);
             this.txtCodigo.TabIndex = 3;
@@ -91,7 +93,7 @@
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(296, 154);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(337, 32);
             this.txtDescripcion.TabIndex = 4;
@@ -100,7 +102,7 @@
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCantidad.Location = new System.Drawing.Point(296, 234);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(337, 32);
             this.txtCantidad.TabIndex = 5;
@@ -123,6 +125,7 @@
             this.btnCargar.TabIndex = 7;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // btnBorrar
             // 
@@ -133,33 +136,43 @@
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dtgvDatos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCodigo,
             this.colDescripcion,
             this.colCantidad});
-            this.dataGridView1.Location = new System.Drawing.Point(120, 348);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(745, 150);
-            this.dataGridView1.TabIndex = 9;
+            this.dtgvDatos.Location = new System.Drawing.Point(51, 18);
+            this.dtgvDatos.Name = "dtgvDatos";
+            this.dtgvDatos.RowHeadersWidth = 51;
+            this.dtgvDatos.RowTemplate.Height = 24;
+            this.dtgvDatos.Size = new System.Drawing.Size(745, 218);
+            this.dtgvDatos.TabIndex = 9;
+            this.dtgvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDatos_CellClick);
+            // 
+            // pnlGrilla
+            // 
+            this.pnlGrilla.Controls.Add(this.dtgvDatos);
+            this.pnlGrilla.Location = new System.Drawing.Point(70, 297);
+            this.pnlGrilla.Name = "pnlGrilla";
+            this.pnlGrilla.Size = new System.Drawing.Size(841, 285);
+            this.pnlGrilla.TabIndex = 10;
             // 
             // colCodigo
             // 
+            this.colCodigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.colCodigo.HeaderText = "Código";
             this.colCodigo.MinimumWidth = 6;
             this.colCodigo.Name = "colCodigo";
-            this.colCodigo.Width = 125;
+            this.colCodigo.Width = 107;
             // 
             // colDescripcion
             // 
+            this.colDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colDescripcion.HeaderText = "Descripción";
             this.colDescripcion.MinimumWidth = 6;
             this.colDescripcion.Name = "colDescripcion";
-            this.colDescripcion.Width = 125;
             // 
             // colCantidad
             // 
@@ -174,7 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(981, 675);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.pnlGrilla);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.lblTitulo);
@@ -185,11 +198,12 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblCodigo);
             this.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grilla Equipo 10";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDatos)).EndInit();
+            this.pnlGrilla.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,7 +220,8 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.Button btnBorrar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvDatos;
+        private System.Windows.Forms.Panel pnlGrilla;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCodigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDescripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCantidad;
