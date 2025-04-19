@@ -38,10 +38,10 @@
             this.btnCargar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.dtgvDatos = new System.Windows.Forms.DataGridView();
-            this.pnlGrilla = new System.Windows.Forms.Panel();
             this.colCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlGrilla = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDatos)).BeginInit();
             this.pnlGrilla.SuspendLayout();
             this.SuspendLayout();
@@ -135,6 +135,7 @@
             this.btnBorrar.TabIndex = 8;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // dtgvDatos
             // 
@@ -150,14 +151,6 @@
             this.dtgvDatos.Size = new System.Drawing.Size(745, 218);
             this.dtgvDatos.TabIndex = 9;
             this.dtgvDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDatos_CellClick);
-            // 
-            // pnlGrilla
-            // 
-            this.pnlGrilla.Controls.Add(this.dtgvDatos);
-            this.pnlGrilla.Location = new System.Drawing.Point(70, 297);
-            this.pnlGrilla.Name = "pnlGrilla";
-            this.pnlGrilla.Size = new System.Drawing.Size(841, 285);
-            this.pnlGrilla.TabIndex = 10;
             // 
             // colCodigo
             // 
@@ -180,6 +173,14 @@
             this.colCantidad.MinimumWidth = 6;
             this.colCantidad.Name = "colCantidad";
             this.colCantidad.Width = 125;
+            // 
+            // pnlGrilla
+            // 
+            this.pnlGrilla.Controls.Add(this.dtgvDatos);
+            this.pnlGrilla.Location = new System.Drawing.Point(70, 297);
+            this.pnlGrilla.Name = "pnlGrilla";
+            this.pnlGrilla.Size = new System.Drawing.Size(841, 285);
+            this.pnlGrilla.TabIndex = 10;
             // 
             // frmPrincipal
             // 
